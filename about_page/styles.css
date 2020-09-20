@@ -369,3 +369,8 @@ body{
         margin: 85vh 30vw 7vh 30vw ;
     }
 }
+@media(min-height:1080px) {
+    .dp-image {
+        height: 1080px;
+    }
+}
