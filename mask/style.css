@@ -6,6 +6,19 @@ body {
 		min-height:100vh;
 		
 }
+
+body::-webkit-scrollbar{
+	width:0.7em;
+}
+body::-webkit-scrollbar-track {
+	background-color:#000;
+	
+}
+body::-webkit-scrollbar-thumb {
+	background-color:#fff;
+	 box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	
+}
 .navbar{
 		
 		z-index: 30;
@@ -16,10 +29,19 @@ body {
 		align-items:center;
 		padding:10px 30px;
 		box-sizing:border-box;
+		background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0));
+		backdrop-filter: blur(3px);
+		
 }
+
 .navbar.scrolled{
 	background-color:#000 !important;
 	transition: background-color 200ms linear;
+}
+
+@font-face {
+font-family: "Navbar";
+src:url("fonts/equinox_bold-webfont.woff") format("woff");
 }
 .logo{
 	width:2px;
@@ -33,36 +55,84 @@ body {
 	
 }
 .links li{
-	margin-right:37px;
+	margin-right:39px;
 }
 .links li a{
 	font-size: 13px;
 	font-weight: 500;
-	font-family:'Arvo',bold;
+	font-family:'Navbar';
 	text-decoration:none;
+	color:#fff;
+	letter-spacing:4px;
+	overflow:hidden;
+	display:block;
+	padding:6px 3px;
+}
+.links li a:hover,
+.links li a:active {
 	color:#000;
-	letter-spacing:1px;
 }
-.links li a:hover{
-	color:#fff;
-}
-.links li a:active{
-	color:#fff;
-}
+
 .links li a:nth-child(6) {
    
   margin-left:8px;
 }
 
+.links li a .f-word,
+.links li a .s-word {
+	display:inline-block;
+	position:relative;
+	transition:transform .3s;
+}
+.links li a .s-word {
+	margin-left:-5px;
+}
+.links li a .f-word::before,
+.links li a .s-word::before {
+	position:absolute;
+	content:attr(data-hover);
+}
+.links li a .f-word::before {
+	color:#000;
+	top:110%;
+}
+.links li a .s-word::before {
+	color:#000;
+	bottom:110%;
+}
+a:hover .f-word{
+	transform:translate3d(0, -110%, 0);
+}
+a:hover .s-word{
+	transform:translate3d(0, 110%, 0);
+}
+	
+
 .heading1{
-	font-family:'Segoe UI';
+	font-family:'Mohave';
 			margin-left:9.5%;
 			margin-top:12%;
-			font-size:70px;
+			font-size:72px;
 			text-align:left;
-			text-space-between:10px;
+			letter-spacing:12px;
 			animation: text 2s 1;
+			text-shadow: 3px 3px 3px gray;
 }
+
+
+@font-face {
+font-family: "Mohave";
+src:url("fonts/Mohave-Regular.otf");
+}
+@font-face {
+font-family: "paragraph";
+src:url("fonts/SIMPLIFICA.ttf");
+}
+@font-face {
+font-family: "Redwing";
+src:url("fonts/Redwing.otf");
+}
+
 
 @keyframes text{
 	0%{
@@ -74,21 +144,23 @@ body {
 }
 	
 .heading2{
-	font-family:'Segoe UI';
+	font-family:'Mohave';
 			margin-left:9.5%;
 			margin-top:-2%;
 			font-size:76px;
 			text-align:left;
 			color:#CFAD56;
+			letter-spacing:16px;
 			animation: text 3s 1;
+			text-shadow: 3px 3px 3px #000;
 }
 .home_detail{
-			font-family:'Segoe UI';
+			font-family:'Navbar';
 			margin-left:9.5%;
 			margin-top:0.5%;
 			font-size:20px;
 			text-align:left;
-			color:#000;
+			color:#fff;
 			letter-spacing: 0.1em; 
 			animation: product 5s 1;
 }
@@ -99,15 +171,6 @@ body {
 		height:150px;
 }
 
-.address-section{
-	display: inline-block;
-	width:40%;
-	height:40%;
-	
-}
-.address-map{
-	margin-top:60px;
-}
 .contact-section{
 	max-height:600px;
 	
@@ -116,8 +179,7 @@ body {
 	
 }
 .contact-section h2{
-	
-	font-family:'Segoe UI';
+	font-family:'Navbar';
 	text-align:center;
 	color:#CFAD56;
 }
@@ -187,7 +249,7 @@ footer{
 
 .container{
 	width:100%;
-	margin-top:10%;
+	margin-top:6%;
 	font-family:sans-serif;
 	letter-spacing:1px;
 	animation: product 2s 1;
@@ -205,9 +267,10 @@ footer{
 	border-radius:8px;
 	color:#fff;
 	width:200px;
-	font-size:24px;
-	padding:5px;
+	font-size:18px;
+	padding:9px;
 	height:40px;
+	font-family:Navbar;
 }
 	
 
@@ -222,20 +285,34 @@ footer{
 	width:100%;
 	height:250px;
 	border-radius:8px;
+	transition:transform 200ms linear;
 	
+}
+.product-image:hover {
+	transform:scale(1.05);
+}
+.p-name {
+	background-color:#fff;
+	border-radius:8px;
+	height:65px;
+	padding:0.1px;
 }
 
 .product-bottom .fa{
 	color:#28a745;
-	font-size:10px;
+	font-size:15px;
+	margin-top:10px;
 }
 .product-bottom h3{
 	font-size:20px;
 	font-weight:bold;
+	margin-top:10px;
+	font-family:'Navbar';
 }
 .product-bottom h5{
 	font-size:15px;
 	font-weight:bold;
+	font-family:'Arvo';
 }
 .overlay{
 	display:block;
@@ -252,7 +329,7 @@ footer{
 }
 .overlay .fa {
 	cursor:pointer;
-	background-color:#186AAA;
+	background-color:#fff;
 	border-radius:5px;
 	color:#000;
 	height:35px;
@@ -262,6 +339,25 @@ footer{
 	margin:5%;
 	margin-bottom:5%;
 }
+.more {
+	background-color:#000;
+	border-radius:25px;
+	width:50%;
+	margin-left:25%;
+	height:30px;
+	padding:5px;
+	margin-top:10px;
+	transition: transform .2s; 
+}
+.more:hover {
+	transform:scale(1.01);
+}
+.more p {
+	color:#fff;
+	text-align:center;
+	font-family:'Navbar';
+}
+
 .overlay .btn-secondary{
 	background:transparent !important;
 	border: none !important;
@@ -285,6 +381,57 @@ footer{
 	animation: product 3s 1;
 	
 }
+.s-confirm {
+	font-size:17px;
+	line-height:18px;
+	font-weight:100;
+	margin-left:290px;
+	text-align:center;
+	color:#FFF;
+	position:relative;
+	border:none;
+	outline:none !important; 
+	width:130px;
+	border-radius:30px;
+	padding:14px 28px;
+	background:linear-gradient(135.44deg, #186AAA 4%, #000  98.53%);
+	box-shadow:0px 4px 12px rgba(84,85,190,0.1);
+	cursor:pointer;
+	transition:250ms ease;
+}
+.s-confirm:hover {
+	transform:scale(1.1);
+}
+
+.s-confirm::after {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, calc(-50%));
+	opacity:0;
+	 outline:none !important; 
+	content:'';
+	width:26px;
+	height:26px;
+	margin:auto;
+	background-size: 100%;
+	background-image:url('tick.png');
+	background-position:center;
+	backdrop-repeat:no-repeat;
+	transition:350ms ease;
+}
+.s-confirm-done {
+	background-position:-130px;
+	color:transparent;
+	outline:none !important; 
+}
+.s-confirm-done:after{
+	opacity:1;
+	transform:translate(-50%, -50%);
+	outline:none !important; 
+}
+
+	
 	
 	
 
@@ -312,7 +459,7 @@ section:nth-child(3){
 section:nth-child(4){
 	background-image:url('img/mask4.png');
 	color:#000;
-	height:95vh;
+	height:100vh;
 }
 .footer {
   overflow: hidden;
@@ -340,14 +487,15 @@ section:nth-child(4){
 .footer .float-sm-right ul li a {
   font-size: 14px;
   color: #F5EFFC;
+  transition: transform 250ms ease;
 }
 
 .footer .float-sm-right ul li:last-child {
   margin-right: 32px;
 }
 
-.footer.float-sm-right ul li:hover a {
-  color: #fff;
+.footer .float-sm-right ul li a:hover {
+  transform:scale(1.5);
 }
 
 .mySlides {display:none}
