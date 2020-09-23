@@ -272,7 +272,7 @@ body{
     text-align: center;
     font-family: 'Henrik';
     letter-spacing: 1px;
-    padding: 0 10px;
+    /* padding: 0 5px 0 5px; */
 }
 .social-link-wrap {
     width: inherit;
@@ -298,7 +298,7 @@ body{
         margin: 80% 30vw 7vh 30vw ;
     }
     .about-card {
-        margin:10vh 10vw;
+        margin:7vh 7vw;
     }
     .card-main {
         width: inherit;
@@ -313,7 +313,7 @@ body{
     .dp-image {
         padding: 10% 10%;
         width: 70vw;
-        height: 60vh;
+        height: 50vh;
         border-radius: 10%;
     }
     .detail-wrap {
@@ -326,16 +326,20 @@ body{
         padding-left: 5%;
     }
     .download {
-        width: 50vw;
+        width: 70vw;
         margin: 85vh 20vw 7vh 25vw ;
     }
     .slideUpBtn{
         width: 40vw;
         margin: 85vh 25vw 7vh 25vw ;
     }
-    
+    .detail-table-wrap {
+        display: block;
+    }
     .detail-table-wrap h3 {
         padding-right: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
     .about-card {
         margin:20vh 5vw 20vh 5vw;
