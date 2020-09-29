@@ -9,6 +9,7 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
         crossorigin="anonymous" />
         <link rel="stylesheet" href="styles.css">
+        
     </head>
     <body>
         <nav class="nav-bar">
@@ -107,5 +108,17 @@
                 
             </div>
         </main>
+        
     </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $(window).scroll(function() { // check if scroll event happened
+            if ($(document).scrollTop() > 20) { // check if user scrolled more than 50 from top of the browser window
+              $(".nav-bar").css("background-color", "#121212"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+            } else {
+              $(".nav-bar").css("background-color", "transparent"); // if not, change it back to transparent
+            }
+          });
+        });
+    </script>
 </html>
