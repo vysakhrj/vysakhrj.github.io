@@ -22,13 +22,7 @@ body{
     color: white;
     padding-left: 10px;
 }
-/* .nav-link {
-    text-decoration: none;
-    padding:0 2vw;
-    color: white;
-    font-family: 'Muli',bold;
-    font-weight: bolder;
-} */
+
 /* external below */
 .borderLeftRight {
     text-decoration: none;
@@ -185,33 +179,14 @@ body{
     justify-self: end;
     display: flex;
 }
-/* .download {
-    position: absolute;
-    vertical-align: bottom;
-    min-width: 100px;
-    width: 20vw;
-    height:50px;
-    border: 1px solid black;
-    margin: 160vh 40vw 7vh 40vw ;
-} */
-/* .download {
-    position: fixed;
-    vertical-align: bottom;
-    min-width: 100px;
-    width: 40vw;
-    height:50px;
-    border: 1px solid black;
-    margin: 85vh 30vw 7vh 30vw ;
-} */
+
 /* external */
 .slideUpBtn {
     position: fixed;
-    /* vertical-align: bottom; */
     min-width: 100px;
     width: 40vw;
     height:50px;
     align-items: center !important;
-    
     justify-content: center;
     border: 1px solid black;
     margin: 85vh 30vw 7vh 30vw ;
@@ -248,7 +223,6 @@ body{
     width: 100%;
     transition: transform 0.5s cubic-bezier(1,.15,.34,.92)
 }
-
 .slideUpBtn::after {
     content: 'DOWNLOAD RESUME';
     font-family: 'Henrik';
@@ -264,7 +238,6 @@ body{
     width: 100%;
 
 }
-
 .slideUpBtn:hover::before {
     transform: translateY(0) scale(3);
     transition-delay: .025s;
@@ -282,6 +255,7 @@ body{
 .download-text {
     text-align: center;
     font-family: 'Henrik';
+    
 }
 .social-link-wrap {
     width: inherit;
@@ -294,12 +268,14 @@ body{
     color:white;
 }
 @media(max-width:620px) {
-    
+    .nav-bar {
+        padding: 5px 0 0 0;
+    }
     .resume-detail {
-        margin: 85vh 20vw 7vh 25vw ;
-        z-index:50;
+        
+        display: blo;
         max-width: 100%;
-        position: absolute;
+        
         min-width: 100px;
         width: 80vw;
         height:50px;
@@ -311,7 +287,6 @@ body{
         width: inherit;
         height: 85%;
         display: block;
-        /* flex-direction: column; */
     }
     .dp-wrap {
         width: 100%;
@@ -333,20 +308,12 @@ body{
     .detail-data {
         padding-left: 5%;
     }
-    /* .download {
-        width: 70vw;
-        margin: 85vh 20vw 7vh 25vw ;
-    } */
     .slideUpBtn{
         width: 40vw;
         margin: 85vh 25vw 7vh 25vw ;
         font-family: 'Henrik';
-    }
-    /* .download-text {
         
-        width: 100%;
-        padding: 5px 24px;
-    } */
+    }
     .detail-table-wrap {
         display: block;
     }
@@ -374,6 +341,19 @@ body{
         width: 100px;
     }
     
+}
+@media(max-width:360px) {
+    .slideUpBtn {
+        width: 50vw;
+        margin-left: 18vw;
+    }
+    .slideUpBtn p {
+        height: 100%;
+        width: 100%;
+        white-space: nowrap;
+        /* font-size: 0.87em;
+        text-align: center; */
+    }
 }
 @media(max-width:890px) {
     .nav-list {
